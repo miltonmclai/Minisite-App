@@ -8,6 +8,13 @@
     <script type="text/javascript" src="js/jquery.mobile-1.0.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.validate-1.9.0.min.js"></script>
     <style>
+			#homeMsg {
+				min-height: 36px;
+				padding: 20px;
+				text-align: center;
+				color: #09F;
+				font-weight: bold;
+			}
 		</style>
     <script type="text/javascript" charset="utf-8">
 		$(function() {
@@ -31,6 +38,7 @@
 			// PhoneGap is ready to be used!
 			function onDeviceReady() {
 				console.log("onDeviceReady: Start");
+				$("#homeMsg").text("onDeviceReady: Start")
 			}
 				
 		});
@@ -45,6 +53,7 @@
         </div>
         <div data-role="content">
           <p style="text-align:center;">Simple mobile app adapting a mobile website as native app</p>
+          <div id="homeMsg"></div>
         </div>
       </div>
     </div>
