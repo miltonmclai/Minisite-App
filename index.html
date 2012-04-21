@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Minisite App</title>
+    <link rel="stylesheet" href="jquery.mobile-1.0.1.min.css" />
+    <script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
+    <script type="text/javascript" src="js/jquery.mobile-1.0.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate-1.9.0.min.js"></script>
+    <style>
+		</style>
+    <script type="text/javascript" charset="utf-8">
+		$(function() {
+			/*
+			 * Homepage Functions
+			 */
+				
+			document.addEventListener('touchmove', function(ev){
+				var winH = $(window).height();
+				var winInnH = $(window).innerHeight();
+				var aPageH = $('.ui-page-active').height();
+				console.log('winH : ' + winH + ' | winInnH : ' + winInnH + ' aPageH | : ' + aPageH);
+				if (winInnH >= aPageH) {
+					ev.preventDefault(); 
+				}
+			});
+			
+			// Wait for PhoneGap to connect with the device
+			document.addEventListener("deviceready",onDeviceReady,false);
+
+			// PhoneGap is ready to be used!
+			function onDeviceReady() {
+				console.log("onDeviceReady: Start");
+			}
+				
+		});
+
+    </script>
+    </head>
+    <body>
+    <div id="wrapper">
+      <div data-role="page" id="home">
+        <div data-role="header">
+          <h1>Minisite App	</h1>
+        </div>
+        <div data-role="content">
+          <p style="text-align:center;">Simple mobile app adapting a mobile website as native app</p>
+        </div>
+      </div>
+    </div>
+		</body>
+</html>
